@@ -1,0 +1,56 @@
+<ul class="tab">
+    <li><a href="javascript:void(0)" class="tablinks" onclick="openAbout(event, 'HowTheSystemWorks')">How the system works</a></li>
+    <li><a href="javascript:void(0)" class="tablinks" onclick="openAbout(event, 'HowToWorkWithTheSystem')">How to work with the system</a></li>
+    <li><a href="javascript:void(0)" class="tablinks" onclick="openAbout(event, 'Dashboarder')">About the dashboard</a></li>
+    <li><a href="javascript:void(0)" class="tablinks" onclick="openAbout(event, 'Marker')">About the marked</a></li>
+    <li><a href="javascript:void(0)" class="tablinks" onclick="openAbout(event, 'Bugs')">Known bugs</a></li>
+</ul>
+
+<div id="HowTheSystemWorks" class="tabcontent">
+    <h3>how the system works</h3>
+    This system was created and designed to monitor the time difference between the hosting server and any server added to it's record.</br>
+    The system perform the test by sending NTP request over UDP:123 with the following built in command:</br>
+    <strong>w32tm /stripchart /dataonly /samples:1 /computer:[computer_Name].</strong></br>
+    This command returns the time difference between the sending server and the destination (computer_Name), if it can not get the time, it returns an error code.
+</div>
+
+<div id="HowToWorkWithTheSystem" class="tabcontent">
+    <h3>How to work with the system</h3>
+    The system has 4 major parts:</br>
+    <ol>
+        <li>The main system table consists of a list with all the systems and the servers.</li>
+        <li>The Dashboards displays all the systems. Double click on a tile will open the system's edit page/</li>
+        <li>The create tabs has 3 options, create a system, create bulk system, add bulk servers to system.</br>
+            The create page will create a new system, the create bulk system will create a new system and add a bulk of systems by a spacific range.</br>
+            The add bulk will add a range of servers to an exsiting system.</br></li>
+        <li>The edit page which has three sections, the first allows to add servers, the second will display all the servers in the system and their state, and when you click the - it will delete the server. the third is a button which when clicked, deletes the system all together.</li>
+    </ol>
+</div>
+
+<div id="Dashboarder" class="tabcontent">
+    <h3>About the dashboard</h3>
+    The dashboard page displays all the systems that can be checked by the server, it shows how many servers are in each system and what is the state of the system by a color. double click on a system tile will open the edit page.</br>
+    If the time difference calculated is greater then 4.5 minutes, the server assumes the destination is out of sync and mark it as <strong style="display: inline; color: red;">BAD</strong>.</br>
+    If the server does not respond at all to the NTP request, it is assumed to be bad as well.</br>
+    If the time difference is less then 4.5 minutes, the server assumes the destination is good, and mark is as <strong style="display: inline; color: green;">GOOD</strong>.
+</div>
+
+<div id="Marker" class="tabcontent">
+    <h3>Marked page</h3>
+    The <strong>MARKED</strong> page contains all the systems that can not be monitored by the server, and needs to be monitored manually.
+    This can be caused either by unsupported OS or by being a system in an unreached environment.</br>
+    The marked page will also contain all systems that has just been created and hadn't been edited yet, or the server could not resolve one of the server's dns name.
+</div>
+
+<div id="Bugs" class="tabcontent">
+    <h3>Known bugs</h3>
+    The system uses several CSS features that are not available in chrome versions lower then 58. You will be redirected to fallback page.</br></br>
+    If the server you are attempting to monitor appears to be BAD, but you know it is in fact working properly, there are two common reasons:
+    <ol>
+        <li>Port 123 UDP from the monitoring server and the destination is blocked.</li>
+        <li>The feature is not enabled on the destination server, to enable it in windows, you should first edit the following registry value, and set it to 1, then you need to restart the w32time service.</br>
+            The registry value: HKLM:\SYSTEM\CurrentControlSet\services\W32Time\TimeProviders\NtpServer\Enabled.</br>
+            this can be done with the following command:</br>
+            REG.EXE ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\W32Time\TimeProviders\NtpServer" /v Enabled /d 1 /t REG_DWORD /f</li>
+    </ol>
+</div>

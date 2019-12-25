@@ -1,0 +1,752 @@
+/*
+ * CSS Styles for Application
+ *
+ */
+
+/* Resets */
+body,p,h1,h2,h3,h4,h5,h6,div,span,header,footer,img,a,a:hover,a:active,a:visited,table,tr,td,th,form,input,button,select,textarea{
+    line-height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-Serif;
+    font-style: oblique;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    color: #1a1a1a;
+    border-width: 0;
+}
+
+.clear{
+    float: none;
+    width: 100%;
+    height: 1px;
+}
+
+/* Main color palette */
+
+/* Header */
+.pageTitle {
+    text-align: center;
+    margin: 0;
+    top: 35px;
+    vertical-align: top;
+}
+
+.header{
+    background: #ffc77d;
+    background:  -webkit-gradient(linear, left top, left bottom, from(#ff8d00), to(#ffc77d));
+    background: -moz-linear-gradient(top, #ff8d00, #ffc77d);
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #fff;
+    box-shadow: 0 -25px 11px 20px #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 25px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    min-width: 1200px;
+}
+
+.header ul{
+    list-style-type: none;
+    text-align: right;
+    padding: 0 75px;
+    float: right;
+    margin-top: -12px;
+}
+
+.header ul li{
+    display: inline-block;
+    padding: 10px 10px 0 10px;
+}
+
+.header ul li a,#createItem{
+    text-transform: uppercase;
+    font-weight: 800 !important;
+    font-size: 16px;
+}
+
+.header .logo{
+    text-align: left;
+    margin-left: 90px;
+    margin-top: -30px;
+    float: left;
+    vertical-align: top;
+}
+
+.header .logo img{
+    width: 70px;
+}
+
+.content {
+    margin-top: 150px;
+    width: 1500px;
+    margin: 150px auto;
+}
+
+.footer{
+    width: 100%;
+    background: #ffae5e;
+    background:  -webkit-gradient(linear, left top, left bottom, from(#ffc77d), to(#de8917));
+    background: -moz-linear-gradient(top, #ffc77d, #de8917);
+    padding: 40px 0;
+    text-align: center;
+    border-width: 1px 0 0 0;
+    border-color: #fff;
+    border-style: solid;
+    bottom: 0;
+    position: fixed;
+}
+
+.footer .copyright{
+    color: black;
+    font-size: 14px;
+}
+
+/* Index */
+h1{
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 0 5px 0;
+}
+
+h2{
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 0 20px 0;
+}
+
+body.index .blurb{
+    text-align: center;
+    background-color: #ececec;
+    border-color: #b3b3b3;
+    border-style: dotted;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto 20px auto;
+    max-width: 500px;
+    line-height: 150%;
+    font-size: 16px;
+}
+
+body.about .blurb{
+    text-align: center;
+    background-color: #ececec;
+    border-color: #b3b3b3;
+    border-style: dotted;
+    border-width: 1px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-top: -10;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    max-width: 2500px;
+    line-height: 150%;
+    font-size: 20px;
+}
+
+body.marked .blurb{
+    text-align: center;
+    background-color: #ececec;
+    border-color: #b3b3b3;
+    border-style: dotted;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto 20px auto;
+    max-width: 500px;
+    line-height: 150%;
+    font-size: 16px;
+}
+
+.ctaWrapper{
+    text-align: center;
+}
+
+.cta,a.cta:hover,a.cta:active,a.cta:visited,button.cta:hover,button.cta:active,button.cta:visited{
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    padding: 15px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.cta.blue{
+    background-color: #214478 !important;
+}
+
+.cta.green{
+    background-color: #217844 !important;
+}
+
+.cta.red{
+    background-color: #c83737 !important;
+}
+
+.warning{
+    font-style: italic;
+    color: #c83737;
+    font-size: 17px;
+    text-align: center;
+    line-height: 150%;
+    padding: 0 0 20px 0 ;
+}
+
+/* Form Styling for Account Creation page and others */
+.formWrapper{
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 15px;
+}
+
+.formError{
+    display: none;
+    background-color: #c83737;
+    font-style: italic;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 0 0 15px 0;
+    text-align: center;
+    border-color: #d87070;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.formSuccess{
+    display: none;
+    background-color: #217844;
+    font-style: italic;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 0 0 15px 0;
+    text-align: center;
+    border-color: #35c06d;
+    border-width: 2px;
+    border-style: solid;
+}
+
+hr {
+    margin: 30px 0;
+}
+
+input,select,option {
+    border-width: 1px;
+    border-radius: 2px;
+    padding: 7px 1%;
+    width: 100%;
+}
+
+.checkboxGroup input{
+    display: inline-block;
+    width: initial;
+    margin: 20px;
+}
+
+input.disabled{
+    background-color: #efefef;
+}
+
+.inputWrapper{
+    padding: 0 0 20px 0;
+}
+
+.inputLabel{
+    padding: 0 0 5px 0;
+    color: #808080;
+}
+
+.backButton{
+    text-transform: uppercase;
+    font-weight: bold !important;
+    display: inline-block !important;
+    width: 100px;
+    padding: 7px !important;
+    color: #fff !important;
+    background-color: #1a1a1a;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    word-break: break-word;
+    border-collapse: collapse;
+    margin-top: -15px;
+
+}
+
+table .content {
+    width: 1700px;
+}
+
+tr{
+    width: 100%;
+}
+
+th{
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    border-color: #000;
+    border-style: dotted;
+    padding: 10px;
+    margin: 0 0 10px 0;
+    background: #ffc77d;
+    background:  -webkit-gradient(linear, left top, left bottom, from(#ffc77d), to(#ff8d00));
+    background: -moz-linear-gradient(top, #ffc77d, #ff8d00);
+    cursor: default;
+    border: 1px solid black;
+}
+
+td{
+    padding: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+td a, td a:hover, td a:active{
+    color: #2e5fa8;
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Page specific styles for dashboard */
+
+#noSystemsMessage td{
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    padding: 20px;
+}
+
+#noSystemsMessage{
+    display: table-row;
+}
+
+#createSystemCTA{
+    margin-top: 40px;
+    display: block;
+}
+
+/* Page specific styles for system edit */
+
+#noServersMessage{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    align-self: end;
+    font-size: 25px;
+    display: grid;
+    grid-area: b;
+}
+
+.reportSvg {
+    fill: white;
+    display: inline-grid;
+}
+
+
+#displayServers {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    grid-template-areas:
+            "a b c";
+}
+
+.goodServer {
+    background-color: #c9fcbb;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 25px;
+}
+
+.badServer {
+    background-color: #ff5953;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 25px;
+}
+
+.unknownServer {
+    background-color: lightgray;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 25px;
+}
+
+.bad {
+    background-color: #ff5953;
+}
+
+.good {
+    background-color: #c9fcbb;
+}
+
+.unknown {
+    background-color: lightgray;
+}
+
+#serverDeleteStatus {
+    display: none;
+}
+
+.editSvg {
+    margin-left: -20px;
+    width: 125%;
+    height: 125%;
+
+}
+
+
+
+
+
+/* Dashboard spacific */
+
+#dashboard {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-gap: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    line-height: 200%;
+    table-layout: fixed;
+    word-break: break-word;
+}
+
+.dashboard .content {
+    width: 1700px;
+}
+
+.goodDash {
+    border: outset;
+    background-color: #c9fcbb;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 21px;
+}
+
+.badDash {
+    border: outset;
+    background-color: #ff5953;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 21px;
+}
+
+.unknownDash {
+    display: none;
+}
+
+#noSystemsMessageDash {
+    background-color: black;
+    color: white;
+    grid-column: 2;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 25px;
+}
+
+.serverCount {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+/*
+ Create dropdown menu
+*/
+
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffc77d;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+
+.show {display:block;}
+
+
+/* marked systems page */
+
+#marked {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+    line-height: 200%;
+    table-layout: fixed;
+    word-break: break-word;
+}
+
+.marked .content {
+    width: 1600px;
+}
+
+.goodMarked {
+    display: none;
+}
+
+.badMarked {
+    display: none;
+}
+
+.unknownMarked {
+    border: outset;
+    background-color: lightgray;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 23px;
+}
+
+#noSystemsMessageMarked {
+    background-color: black;
+    color: white;
+    grid-column: 2;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 25px;
+}
+
+
+/*
+About page
+ */
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a{
+    display: block;
+    float: left;
+    border-top: 1px solid #96d1f8;
+    background: #ffc77d;
+    background:  -webkit-gradient(linear, left top, left bottom, from(#ffc77d), to(#ff8d00));
+    background: -moz-linear-gradient(top, #ffc77d, #ff8d00);
+    height: 25px;
+    padding: 0 10px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 3px;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    -webkit-text-stroke: 1px transparent;
+    text-decoration: none;
+    margin: 0 5px 0 0;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    display: block;
+    float: left;
+    border-top: 1px solid #96d1f8;
+    background: #ffc77d;
+    background:  -webkit-gradient(linear, left top, left bottom, from(#ffc77d), to(#ff8d00));
+    background: -moz-linear-gradient(top, #ffc77d, #ff8d00);
+    height: 25px;
+    padding: 0 10px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 3px;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    -webkit-text-stroke: 1px transparent;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 5px 0 0;
+}
+
+header {
+    width: 1700px;
+}
+
+
+
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #ff8d00;
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {background-color: #ff8d00;}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background: #ffc77d;
+    font-size: 20px;
+    line-height: 125%;
+}
+
+.tabcontent h3 {
+    font-size: 25px;
+    line-height: 150%;
+    text-decoration: underline;
+}
+
+
+#myInput {
+    width: 170px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    padding-top: 12px;
+    padding-right: 20px;
+    padding-left: 40px;
+    padding-bottom: 12px;
+    margin-top: -65px;
+}
+
+/* When the input field gets focus, change its width to 100% */
+#myInput:focus {
+    width: 100%;
+}
+
+
+
+
+
+/*Admin page style */
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 1); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .closebtn {
+        font-size: 40px !important;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+.cta.orange{
+    background:  -webkit-gradient(linear, left top, left bottom, from(#ffc77d), to(#ff8d00));
+    background: -moz-linear-gradient(top, #ffc77d, #ff8d00);
+}
+
+#logOrderList {
+    list-style-type: circle;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+p #logItem {
+    font-size: 16px;
+    line-height: 20px;
+}

@@ -1,0 +1,39 @@
+<h1>Bulk add servers to system and create the system</h1>
+
+<div class="formWrapper">
+    <form id="systemCreate" action="/api/bulkCreate" method="POST">
+        <div class="formError"></div>
+        <div class="formSuccess"></div>
+        <div class="inputWrapper">
+            <div class="inputLabel">System Name</div>
+            <input type="text" name="system" autofocus />
+        </div>
+        <div class="inputWrapper">
+            <div class="inputLabel">Domain Name</div>
+            <input type="text" name="domain" placeholder="services.idf" />
+        </div>
+        <div class="inputWrapper">
+            <div class="inputLabel">ServerName Prefix</div>
+            <input type="text" name="prefix" />
+        </div>
+        <div class="inputWrapper">
+            <div class="inputLabel">ServerName Suffix</div>
+            <input type="text" name="suffix" />
+        </div>
+        <div class="inputWrapper">
+            <div class="inputLabel">Places</div>
+            <input type="number" name="places" />
+        </div>
+        <div class="inputWrapper">
+            <div class="inputLabel">Start Number</div>
+            <input type="number" name="starter" />
+        </div>
+        <div class="inputWrapper">
+            <div class="inputLabel">End Number</div>
+            <input type="number" name="ender" />
+        </div>
+        <div class="inputWrapper ctaWrapper">
+            <button type="submit" class="cta blue">Add Them Up</button>
+        </div>
+    </form>
+</div>
